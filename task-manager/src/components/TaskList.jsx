@@ -1,14 +1,14 @@
 import React from 'react'
 import TaskItem from './TaskItem'
 
-function TaskList({task, toggleComplete, deleteTask }) {
+function TaskList({tasks, toggleComplete, deleteTask }) {
   return (
     <div className='task-list'>
-        {task.length === 0 ?(
+        {tasks.length === 0 ?(
             <p className='empty-message'>No Task Added Yet</p>
         ): (
             // map enables iteration untill all tasks are found
-            task.map((task) => {
+            tasks.map((tasks) => {
                 <TaskItem
                 key={task.id}
                 toggleComplete={toggleComplete}
